@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head><title>script 태그에 자바스크립트 작성</title>
+<script>
+function over(obj) {
+	obj.style.background="blue";
+	obj.style.color="white";
+}
+function out(obj) {
+	obj.style.background="white";
+	obj.style.color="black";
+}
+function over2(obj) {
+obj.src="img/banana1.png";
+}
+function out2(obj) {
+obj.src="img/apple1.png";
+}
+</script>
+</head>
+<body>
+<h3 id=exam1>마우스 올려 보세요 (this 인스턴스를 사용하세요) </h3>
+<hr>
+<div onmouseover="over(this)" onmouseout="out(this)">
+	여기에 마우스를 올리면 배경색이 파란색으로 변하고 글자색이 하얀색으로 변합니다.
+</div>
+<h3>마우스를 그림에 올리면 그림이 변합니다 (this 인스턴스를 사용하세요)</h3>
+<hr>
+<img src="img/apple1.png" alt="이미지" 
+	onmouseover="over2(this)"
+	onmouseout="out2(this)">
+</body>
+</html>
